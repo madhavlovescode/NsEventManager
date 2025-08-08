@@ -1,0 +1,27 @@
+mod {
+            wizards.newContentElement.wizardItems.plugins {
+                elements {
+                    nseventcrud {
+                        iconIdentifier = ns_event_manager-plugin-nseventcrud
+                        title = LLL:EXT:ns_event_manager/Resources/Private/Language/locallang_db.xlf:tx_ns_event_manager_nseventcrud.name
+                        description = LLL:EXT:ns_event_manager/Resources/Private/Language/locallang_db.xlf:tx_ns_event_manager_nseventcrud.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = nseventmanager_nseventcrud
+                        }
+                            
+                    }
+                    eventshow {
+                        iconIdentifier = ns_event_manager-plugin-eventshow
+                        title = LLL:EXT:ns_event_manager/Resources/Private/Language/locallang_db.xlf:tx_ns_event_manager_eventshow.name
+                        description = LLL:EXT:ns_event_manager/Resources/Private/Language/locallang_db.xlf:tx_ns_event_manager_eventshow.description
+                        tt_content_defValues {
+                            CType = list
+                            list_type = nseventmanager_eventshow
+                        }
+                    }
+                }
+                show = *
+            }
+       }
+    
