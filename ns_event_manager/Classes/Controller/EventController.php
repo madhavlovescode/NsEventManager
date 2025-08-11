@@ -31,8 +31,8 @@ use TYPO3\CMS\Core\SysLog\Action as SystemLogGenericAction;
 use TYPO3\CMS\Core\SysLog\Error as SystemLogErrorClassification;
 use TYPO3\CMS\Core\SysLog\Type as SystemLogType;
 use TYPO3\CMS\Core\Service\FlexFormService;
-
-
+//define utility class here
+use NITSAN\NsEventManager\Utility\StringUtility;
 /**
  * This file is part of the "EventCrud" Extension for TYPO3 CMS.
  *
@@ -92,6 +92,8 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
     public function showAction(\NITSAN\NsEventManager\Domain\Model\Event $event = null  ): \Psr\Http\Message\ResponseInterface
     {   
+        
+
          $ListPageId = $this->settings['ListPageId'] ?? null;
     //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings, __FILE__.' Line No. '.__LINE__);die();
       
@@ -112,6 +114,7 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function newAction(): \Psr\Http\Message\ResponseInterface
     {
+
         return $this->htmlResponse();
     }
 
@@ -271,9 +274,12 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @return \Psr\Http\Message\ResponseInterface
      */
     public function listAction(): \Psr\Http\Message\ResponseInterface
-    { 
-    $detailPageId = $this->settings['detailPageId'] ?? null;
-    // 
+    {   
+     
+    $reversed = GeneralUtility::camelCaseToLowerCaseUnderscored("Hello TYPO3 madhav THIS side");
+    echo $reversed;
+
+    $detailPageId = $this->settings['detailPageId'] ?? null; 
 
     // Fetch events from repository
     $events = $this->eventRepository->findAll();

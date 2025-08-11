@@ -24,6 +24,9 @@ final class ReverseStringViewHelper extends AbstractViewHelper
     public function render(): string
     {
         $strtorev = $this->arguments['text'];
+        if($strtorev ===null || $strtorev === '') {
+            return '';
+        }
         return strrev($strtorev);
 
     }
