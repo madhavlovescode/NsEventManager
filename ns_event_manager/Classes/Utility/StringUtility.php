@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace NITSAN\NsEventManager\Utility;
 
-class GeneralUtility
+class StringUtility
 {
       public static function camelCaseToLowerCaseUnderscored(string $input): string
     {
@@ -12,3 +12,6 @@ class GeneralUtility
     }
 
 }
+
+
+

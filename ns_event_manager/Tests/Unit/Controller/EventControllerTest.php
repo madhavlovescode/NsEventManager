@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 namespace NITSAN\NsEventManager\Tests\Unit\Controller;
-
 use PHPUnit\Framework\MockObject\MockObject;
 use TYPO3\TestingFramework\Core\AccessibleObjectInterface;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
