@@ -4,10 +4,12 @@ services:
     autoconfigure: true
     public: false
 
-  
-  NITSAN\NsEventManager\EventListener\LoggerEventListener:
-    tags:
-      - name: event.listener
-        identifier: 'ns_event_manager/extension_activated'
+  NITSAN\NsEventManager\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+    
 
-  
+  NITSAN\NsEventManager\Controller\EventController:
+    arguments:
+      $eventRepository: '@NITSAN\NsEventManager\Domain\Repository\EventRepository'
+      $persistenceManager: '@TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager'

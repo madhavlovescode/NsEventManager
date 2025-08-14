@@ -3,8 +3,7 @@
 declare(strict_types=1);
 
 namespace NITSAN\NsEventManager\Controller;
-use NITSAN\NsEventManager\EventListener\EventCreate;
-use TYPO3\CMS\Extbase\Persistence\Generic\Typo3QuerySettings;
+
 use TYPO3\CMS\Core\Resource\ResourceFactory;
 use NITSAN\NsEventManager\Domain\Repository\EventRepository;
 use TYPO3\CMS\Core\Database\ConnectionPool;
@@ -32,8 +31,8 @@ use TYPO3\CMS\Core\SysLog\Action as SystemLogGenericAction;
 use TYPO3\CMS\Core\SysLog\Error as SystemLogErrorClassification;
 use TYPO3\CMS\Core\SysLog\Type as SystemLogType;
 use TYPO3\CMS\Core\Service\FlexFormService;
+//define utility class here
 use NITSAN\NsEventManager\Utility\StringUtility;
-
 /**
  * This file is part of the "EventCrud" Extension for TYPO3 CMS.
  *
@@ -72,10 +71,8 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     public function __construct(
         EventRepository $eventRepository,
         private readonly FlexFormService $flexFormService,
-         PersistenceManager $persistenceManager,
-          protected LogRepository $logRepository,
-         protected LoggerInterface $logger,
-        protected EventDispatcherInterface $eventDispatcher
+         PersistenceManager $persistenceManager
+        
 
     )
 
@@ -178,14 +175,6 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
                     );
                 }
             }
-             $eventdis = new EventCreate($newEvent);
-\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($newEvent, 'Event');
-$this->eventDispatcher->dispatch($eventdis);
-
-            // Log the event
-            $eventqq = new EventCreate($newEvent);
-$this->eventDispatcher->dispatch($eventqq);
-
             $this->addFlashMessage('The object was created ', '');
         }catch (IllegalObjectTypeException |  Error $exception){
 
