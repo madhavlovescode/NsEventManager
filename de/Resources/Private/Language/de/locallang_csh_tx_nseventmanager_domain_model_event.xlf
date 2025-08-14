@@ -5,19 +5,19 @@
     <body>
       <trans-unit id="title.description" resname="title.description">
         <source>title</source>
-        <target state="needs-translation">title</target>
+        <target state="translated">titel</target>
       </trans-unit>
       <trans-unit id="description.description" resname="description.description">
         <source>description</source>
-        <target state="needs-translation">description</target>
+        <target state="translated">beschreibung</target>
       </trans-unit>
       <trans-unit id="organizer_name.description" resname="organizer_name.description">
         <source>organizerName</source>
-        <target state="needs-translation">organizerName</target>
+        <target state="translated">organisatorenname</target>
       </trans-unit>
       <trans-unit id="mode.description" resname="mode.description">
         <source>mode</source>
-        <target state="needs-translation">mode</target>
+        <target state="translated">modus</target>
       </trans-unit>
       <trans-unit id="location.description" resname="location.description">
         <source>location</source>
