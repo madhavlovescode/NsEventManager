@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="EXT:ns_event_manager/Resources/Private/Language/locallang_csh_tx_nseventmanager_domain_model_location.xlf" date="2025-07-30T20:36:36Z" product-name="ns_event_manager" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="name.description" resname="name.description">
+        <source>name</source>
+        <target state="needs-translation">name</target>
+      </trans-unit>
+      <trans-unit id="city.description" resname="city.description">
+        <source>city</source>
+        <target state="needs-translation">city</target>
+      </trans-unit>
+      <trans-unit id="zip_code.description" resname="zip_code.description">
+        <source>zipCode</source>
+        <target state="needs-translation">zipCode</target>
+      </trans-unit>
+      <trans-unit id="capacity.description" resname="capacity.description">
+        <source>capacity</source>
+        <target state="needs-translation">capacity</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
