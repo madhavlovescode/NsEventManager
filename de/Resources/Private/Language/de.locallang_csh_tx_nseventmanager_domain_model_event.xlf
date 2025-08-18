@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="EXT:ns_event_manager/Resources/Private/Language/locallang_csh_tx_nseventmanager_domain_model_event.xlf" date="2025-07-30T20:36:36Z" product-name="ns_event_manager" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="title.description" resname="title.description">
+        <source>title</source>
+        <target state="translated">titel</target>
+      </trans-unit>
+      <trans-unit id="description.description" resname="description.description">
+        <source>description</source>
+        <target state="translated">beschreibung</target>
+      </trans-unit>
+      <trans-unit id="organizer_name.description" resname="organizer_name.description">
+        <source>organizerName</source>
+        <target state="translated">organisatorenname</target>
+      </trans-unit>
+      <trans-unit id="mode.description" resname="mode.description">
+        <source>mode</source>
+        <target state="translated">modus</target>
+      </trans-unit>
+      <trans-unit id="location.description" resname="location.description">
+        <source>location</source>
+        <target state="needs-translation">location</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
