@@ -13,3 +13,11 @@ services:
     arguments:
       $eventRepository: '@NITSAN\NsEventManager\Domain\Repository\EventRepository'
       $persistenceManager: '@TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager'
+  
+
+  # NITSAN\NsEventManager\Controller\EventController:
+  #   tags:
+  #     - name: frontend.asset
+  #       file: 'EXT:your_extension/Resources/Public/JavaScript/myscript.js'
+  #       type: javascript
+  #       position: footer

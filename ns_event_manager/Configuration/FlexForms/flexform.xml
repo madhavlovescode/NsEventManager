@@ -23,6 +23,18 @@
                             </suggestOptions>
 							</config>
 					</settings.detailPageId>
+											<settings.checkbox>
+							<label>LLL:EXT:ns_event_manager/Resources/Private/Language/locallang_flex.xlf:listing.checkbox</label>
+							<config>
+								<type>check</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">enable</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</settings.checkbox>
 				</el>
 			</ROOT>
 		</sDEF>

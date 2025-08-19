@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="EXT:ns_event_manager/Resources/Private/Language/locallang.xlf" date="2025-07-30T20:36:36Z" product-name="ns_event_manager" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tx_nseventmanager_domain_model_event" resname="tx_nseventmanager_domain_model_event" approved="yes">
+        <source>Event</source>
+        <target state="final">Ereignis</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.description" resname="tx_nseventmanager_domain_model_event.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.title" resname="tx_nseventmanager_domain_model_event.title" approved="yes">
+        <source>Title</source>
+        <target state="final">Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.title.description" resname="tx_nseventmanager_domain_model_event.title.description" approved="yes">
+        <source>Title</source>
+        <target state="final">Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.description.description" resname="tx_nseventmanager_domain_model_event.description.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.organizer_name" resname="tx_nseventmanager_domain_model_event.organizer_name" approved="yes">
+        <source>Organizer Name</source>
+        <target state="final">Name des Organisators</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.organizer_name.description" resname="tx_nseventmanager_domain_model_event.organizer_name.description" approved="yes">
+        <source>Organizer Name</source>
+        <target state="final">Name des Organisators</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.mode" resname="tx_nseventmanager_domain_model_event.mode" approved="yes">
+        <source>Mode</source>
+        <target state="final">Modus</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.mode.description" resname="tx_nseventmanager_domain_model_event.mode.description" approved="yes">
+        <source>Mode</source>
+        <target state="final">Modus</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.location" resname="tx_nseventmanager_domain_model_event.location" approved="yes">
+        <source>Location</source>
+        <target state="final">Standort</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_event.location.description" resname="tx_nseventmanager_domain_model_event.location.description" approved="yes">
+        <source>Location</source>
+        <target state="final">Standort</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location" resname="tx_nseventmanager_domain_model_location" approved="yes">
+        <source>Location</source>
+        <target state="final">Standort</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.description" resname="tx_nseventmanager_domain_model_location.description" approved="yes">
+        <source>Location</source>
+        <target state="final">Standort</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.name" resname="tx_nseventmanager_domain_model_location.name" approved="yes">
+        <source>Name</source>
+        <target state="final">Name</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.name.description" resname="tx_nseventmanager_domain_model_location.name.description" approved="yes">
+        <source>Name</source>
+        <target state="final">Name</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.city" resname="tx_nseventmanager_domain_model_location.city" approved="yes">
+        <source>City</source>
+        <target state="final">Stadt</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.city.description" resname="tx_nseventmanager_domain_model_location.city.description" approved="yes">
+        <source>City</source>
+        <target state="final">Stadt</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.zip_code" resname="tx_nseventmanager_domain_model_location.zip_code" approved="yes">
+        <source>Zip Code</source>
+        <target state="final">Postleitzahl</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.zip_code.description" resname="tx_nseventmanager_domain_model_location.zip_code.description" approved="yes">
+        <source>Zip Code</source>
+        <target state="final">Postleitzahl</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.capacity" resname="tx_nseventmanager_domain_model_location.capacity" approved="yes">
+        <source>Capacity</source>
+        <target state="final">Kapazität</target>
+      </trans-unit>
+      <trans-unit id="tx_nseventmanager_domain_model_location.capacity.description" resname="tx_nseventmanager_domain_model_location.capacity.description" approved="yes">
+        <source>Capacity</source>
+        <target state="final">Kapazität</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

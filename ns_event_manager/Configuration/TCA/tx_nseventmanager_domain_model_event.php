@@ -25,7 +25,7 @@ return [
         'iconfile' => 'EXT:ns_event_manager/Resources/Public/Icons/tx_nseventmanager_domain_model_event.gif'
     ],
     'types' => [
-        '1' => ['showitem' => 'title, description, organizer_name, mode, image, location, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, sys_language_uid, l10n_parent, l10n_diffsource, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
+        '1' => ['showitem' => 'title, description, organizer_name, mode, image, checkbox, location, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language, sys_language_uid, l10n_parent, l10n_diffsource, --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access, hidden, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -169,19 +169,30 @@ return [
 
         ],
 
-'image' => [
-    'exclude' => true,
-    'label' => 'LLL:EXT:ns_event_manager/Resources/Private/Language/locallang_db.xlf:tx_nseventmanager_domain_model_event.image',
-    'config' => [
-        'type' => 'file',
-        'appearance' => [
-            'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media.addFileReference',
+        'image' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:ns_event_manager/Resources/Private/Language/locallang_db.xlf:tx_nseventmanager_domain_model_event.image',
+            'config' => [
+                'type' => 'file',
+                'appearance' => [
+                    'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:media.addFileReference',
+                ],
+                'allowed' => 'common-media-types',
+                'maxitems' => 1,
+            ],
         ],
-        'allowed' => 'common-media-types',
-        'maxitems' => 1,
-    ],
-],
 
+        'checkbox' => [
+        'exclude' => 1,
+        'label' => 'checkbox_2 one checkbox with label',
+        'config' => [
+            'type' => 'check',
+            'items' => [
+                // label, value
+                ['enable', '1'],
+            ],
+        ]
+        ],
 
 // 'image' => [
 //     'exclude' => true,

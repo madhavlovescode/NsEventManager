@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 namespace NITSAN\NsEventManager\Domain\Repository;
+
+use TYPO3\CMS\Extbase\Persistence\Repository;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\SysLog\Action as SystemLogGenericAction;
@@ -242,4 +244,30 @@ class EventRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         return  $q->from(self::TABLE)
             ->select('*');
     }
+
+ /**
+     * Custom search method for Events
+     *
+     * @param string $term
+     * @return QueryResultInterface
+     */
+    public function findBySearch(string $term): QueryResultInterface
+    {
+//
+        $query = $this->createQuery();
+        if (!empty($term)) {
+          $constraints = [
+            $query->like('title', '%' . $term . '%'),
+            $query->like('description', '%' . $term . '%'),
+            $query->like('mode', '%' . $term . '%'),
+            $query->like('organizer_name', '%' . $term . '%'),
+        ];
+
+        $query->matching(
+            $query->logicalOr(...$constraints)
+        );
+        }   
+        return $query->execute();
+    }
+
 }

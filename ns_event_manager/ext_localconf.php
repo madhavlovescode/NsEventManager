@@ -14,7 +14,7 @@ defined(constant_name: 'TYPO3') or die;
         ],
         // non-cacheable actions
         [
-            \NITSAN\NsEventManager\Controller\EventController::class => 'create, update, delete'
+            \NITSAN\NsEventManager\Controller\EventController::class => 'create, update, delete, list'    
         ],
         null
     );
@@ -23,11 +23,11 @@ defined(constant_name: 'TYPO3') or die;
         'NsEventManager',
         'Eventshow',
         [
-            \NITSAN\NsEventManager\Controller\EventController::class => 'show'
+            \NITSAN\NsEventManager\Controller\EventController::class => 'show, list'
         ],
         // non-cacheable actions
         [
-            \NITSAN\NsEventManager\Controller\EventController::class => 'show'
+            \NITSAN\NsEventManager\Controller\EventController::class => 'show, list'
         ],
         null
     );

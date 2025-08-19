@@ -97,7 +97,9 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 
          $ListPageId = $this->settings['ListPageId'] ?? null;
     //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($this->settings, __FILE__.' Line No. '.__LINE__);die();
-      
+      //code for searchbar start 
+    
+    //code for search bar 
     if ($event) {
            
              $this->view->assignMultiple([
@@ -178,9 +180,9 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
             $this->addFlashMessage('The object was created ', '');
         }catch (IllegalObjectTypeException |  Error $exception){
 
-            //$this->logger->error(
-           //     'An error was occurred in insertion operation'.$exception->getMessage()
-           // );
+            $this->logger->error(
+               'An error was occurred in insertion operation'.$exception->getMessage()
+           );
             $this->addFlashMessage('Some error occurred', '');
 
         }
@@ -240,7 +242,7 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
         }   
 
         $this->eventRepository->update($event);
-      //   \TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($event->update($event), __FILE__.' Line No. '.__LINE__);die();
+      //   
        return $this->redirect('list');
     }
 
@@ -276,25 +278,46 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function listAction(): \Psr\Http\Message\ResponseInterface
     {   
-     
-    $reversed = StringUtility::camelCaseToLowerCaseUnderscored("Hello TYPO3 madhav THIS side");
-    echo $reversed;
 
-    $detailPageId = $this->settings['detailPageId'] ?? null; 
+    $enableSearch = (bool)$this->settings['checkbox'];
 
-    // Fetch events from repository
-    $events = $this->eventRepository->findAll();
+    $searchTerm =  isset($this->request->getParsedBody()['tx_nseventmanager_nseventcrud']) ?
+         $this->request->getParsedBody()['tx_nseventmanager_nseventcrud']['search']['sword'] : '';
+         if ($searchTerm){
+        $records = $this->eventRepository->findBySearch($searchTerm);
+    } else {
+        // Show all records
+        $records = $this->eventRepository->findAll();
+    }
 
-    // Pass the events and detailPageId to the Fluid template
     $this->view->assignMultiple([
-        'events' => $events,
-        'detailPageId' => $detailPageId
+        'records' => $records,
+        'enableSearch' => $enableSearch,
+        'searchTerm' => $searchTerm
     ]);
-    // Return the response
-    return $this->htmlResponse();   
+
+    return $this->htmlResponse();
     
+//below code is usefull for utility 
+    // $reversed = StringUtility::camelCaseToLowerCaseUnderscored("Hello TYPO3 madhav THIS side");
+    // echo $reversed;
+
+    // $detailPageId = $this->settings['detailPageId'] ?? null; 
+
+    // // Fetch events from repository
+    // $events = $this->eventRepository->findAll();
+
+    // // Pass the events and detailPageId to the Fluid template
+    // $this->view->assignMultiple([
+    //     'events' => $events,
+    //     'detailPageId' => $detailPageId
+    // ]);
+    // // Return the response
+    // return $this->htmlResponse();   
+
     }
     
+
 
    
 }

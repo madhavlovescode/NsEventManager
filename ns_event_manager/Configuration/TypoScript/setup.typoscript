@@ -77,3 +77,42 @@ plugin.tx_nseventmanager._CSS_DEFAULT_STYLE (
         color: green;
     }
 )
+
+// page.includeJSFooter {
+//   search = EXT:nseventmanager/Resources/Public/JavaScript/search.js
+// }
+
+// listAction = PAGE
+// listAction {
+//     typeNum = 941851233551   # ✅ Unique typeNum for AJAX requests
+//     config {
+//         disableAllHeaderCode = 1
+//         additionalHeaders = Content-type:application/json
+//         xhtml_cleaning = 0
+//         admPanel = 0
+//     }
+
+//     10 = USER
+//     10 < styles.content.get
+//     10 {
+//         userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+//         extensionName = NsEventManager
+//         pluginName = Nseventcrud
+//         vendorName = NITSAN
+//         controller = Event
+//         switchableControllerActions {
+//             Event {
+//                 1 = list   
+//             }
+//         }
+//     }
+// }
+
+
+page.includeJS {
+    search = EXT:nseventmanager/Resources/Public/JavaScript/Search.js
+    search.excludeFromConcatenation = 1
+    search.disableCompression = 1
+}
+
+page.includeJS.Search = EXT:nseventmanager/Resources/Public/JavaScript/Search.js

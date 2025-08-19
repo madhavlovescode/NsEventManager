@@ -253,4 +253,17 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         $this->image->detach($image);
     }
 
+     public function findBySearch(string $term): QueryResultInterface
+    {
+        
+        $query = $this->createQuery();
+        if (!empty($term)) {
+            $query->matching(
+                $query->like('title', '%' . $term . '%')
+            );
+        }
+
+        return $query->execute();
+    }
+
 }

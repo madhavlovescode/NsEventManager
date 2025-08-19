@@ -15,6 +15,9 @@
 			<trans-unit id="listing.paginationType" resname="listing.paginationType">
 				<source>pagination tpye</source>
 			</trans-unit>
+			<trans-unit id="listing.checkbox" resname="listing.checkbox">
+				<source>search-bar filteration </source>
+			</trans-unit>
 			<trans-unit id="listing.paginationType_loadMore" resname="listing.paginationType_loadMore">
 				<source>Load more</source>
 			</trans-unit>
