@@ -19,6 +19,10 @@
         <source>pagination tpye</source>
         <target state="needs-translation">pagination tpye</target>
       </trans-unit>
+      <trans-unit id="listing.checkbox" resname="listing.checkbox">
+        <source>search-bar filteration </source>
+        <target state="needs-translation">search-bar filteration </target>
+      </trans-unit>
       <trans-unit id="listing.paginationType_loadMore" resname="listing.paginationType_loadMore">
         <source>Load more</source>
         <target state="needs-translation">Load more</target>
